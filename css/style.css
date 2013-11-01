@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+
+body {
+	background-color: #474b4a;
+	color: #9cc3bf;
+	font-family: 'Dosis', sans-serif;
+}
+
+.navigation-text {
+	font-family: 'Share Tech Mono', sans-serif;
+}
+
+#logo {
+		color: #37cdc7;
+}
+
+#nav-menu {
+	float: right;
+}
