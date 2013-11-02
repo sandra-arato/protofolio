@@ -1,20 +1,47 @@
 @import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
 @import url(http://fonts.googleapis.com/css?family=Dosis);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Anaheim);
 
 body {
 	background-color: #474b4a;
-	color: #9cc3bf;
+	color: #bbc5c4;
 	font-family: 'Dosis', sans-serif;
 }
 
-.navigation-text {
+.my-navigation-text {
 	font-family: 'Share Tech Mono', sans-serif;
 }
 
-#logo {
+#my-logo {
 		color: #37cdc7;
 }
 
-#nav-menu {
+#my-nav-menu {
 	float: right;
+}
+
+#my-h1 {
+	font-family: 'Dosis', sans-serif;	
+}
+
+.starter-template .my-container {
+	text-align: left;
+	background-color: #212123;
+	padding: 4px;
+}
+
+.my-font-family div {
+	background-color: #ddd;
+	text-align: center;
+	color: #212123;
+	/*box-sizing: border-box;*/
+	/*margin: 12px;*/
+	padding: 24px;
+	border: #222;
+}
+
+.my-font-family div:hover {
+	background-color: #212123;
+	color: #ddd;
 }
