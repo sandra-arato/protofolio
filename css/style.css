@@ -5,7 +5,7 @@
 
 body {
 	background-color: #474b4a;
-	color: #bbc5c4;
+	color: #acccca;
 	font-family: 'Dosis', sans-serif;
 }
 
@@ -44,4 +44,19 @@ body {
 .my-font-family div:hover {
 	background-color: #212123;
 	color: #ddd;
+}
+
+.tryout {
+	background-color: #212123;
+	font-size: 14px;
+	text-align: center;
+}
+
+.tryout img {
+	width: 100%;
+}
+
+.tryout span {
+	font-size: 20px;
+	padding-top: 6px;
 }
