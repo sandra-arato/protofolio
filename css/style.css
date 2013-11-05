@@ -9,20 +9,20 @@ body {
 	font-family: 'Dosis', sans-serif;
 }
 
+h1, h2 {
+	font-family: 'Dosis', sans-serif;	
+}
+
 .my-navigation-text {
 	font-family: 'Share Tech Mono', sans-serif;
 }
 
 #my-logo {
-		color: #37cdc7;
+	color: #37cdc7;
 }
 
 #my-nav-menu {
 	float: right;
-}
-
-#my-h1 {
-	font-family: 'Dosis', sans-serif;	
 }
 
 .starter-template .my-container {
@@ -35,10 +35,7 @@ body {
 	background-color: #ddd;
 	text-align: center;
 	color: #212123;
-	/*box-sizing: border-box;*/
 	/*margin: 12px;*/
-	padding: 24px;
-	border: #222;
 }
 
 .my-font-family div:hover {
@@ -46,17 +43,64 @@ body {
 	color: #ddd;
 }
 
-.tryout {
+.my-portfolio div {
 	background-color: #212123;
 	font-size: 14px;
 	text-align: center;
 }
 
-.tryout img {
+.my-portfolio img {
 	width: 100%;
 }
 
-.tryout span {
+.my-portfolio span {
 	font-size: 20px;
 	padding-top: 6px;
+}
+
+form input {
+	margin: 20px 0 20px 0;
+}
+
+.form-control:focus {
+	border-color: #37cdc7;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px
+		rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(55, 205, 199, 0.6);
+	box-shadow: inset 0 1px 1px
+		rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(55, 205, 199, 0.6);
+}
+
+.my-right-contact {
+	text-align: right;
+}
+
+.my-right-contact span {
+	font-size: 30px;
+}
+
+.my-right-contact div {
+	margin-top: 28px;
+}
+
+#track-geoloc, #track-avail {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 48%;
+	padding: 38px 8px 12px 0;
+	font-size: 18px;
+	
+}
+
+#track-avail {
+	background-color: #37cdc7;
+	background-color: rgba(55, 205, 199, 0.6);
+	border-color: #37cdc7;
+	border-color: rgba(55, 205, 199, 0.6);
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	color: #212123;
 }
