@@ -58,6 +58,14 @@ div.my-portfolio:hover {
 		rgba(55, 205, 199, 0.8);
 }
 
+.row {
+	display: table-row;
+}
+
+.thumbnails {
+	display: table-cell;
+}
+
 .my-portfolio img {
 	width: 100%;
 }

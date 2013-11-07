@@ -177,14 +177,31 @@ var projects = [
 
 var mainContent;
 
-// function masonry() {
-// 	var container = document.getElementById("project-thumbnails");
-// 	var msnry = new Masonry( container, {
-// 	  // options...
-// 	  itemSelector: '.item',
-// 	  columnWidth: 720
-// 	});
-// }
+function carousel() {
+	$( ".my-portfolio:hover" ).hover(
+	  function() {
+	    $( this ).addClass( "carousel slide" );
+	    $( this ).attr("id", "carousel-example-generic");
+	    $( this ).attr("data-ride", "carousel");
+	  }, function() {
+	    $( this ).removeClass( "carousel slide" );
+	    $( this ).attr("id", "");
+	    $( this ).attr("data-ride", "");
+	  }
+	);
+}
+
+function setHeight () {
+	boxes = $( ".thumbnails" );
+	console.log(boxes);
+	maxHeight = Math.max.apply(
+	  Math, boxes.map(function() {
+	    return $(this).height();
+	}).get());
+	// maxHeight = $("#project-thumbnails").height();
+	console.log(maxHeight);
+	// boxes.height(maxHeight);
+}
 
 function clearfix() {
 	var clearDiv = $("<div />")
@@ -197,12 +214,10 @@ function clearfix() {
 
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
-  console.log("helloo");
   renderCards();
-  clearfix();
-  console.log("done");
-  // masonry();
-
+  // setHeight();
+  // carousel();
+  
 }
 
 function renderCards() {
@@ -211,6 +226,7 @@ function renderCards() {
   for (var i = 0; i < projects.length; i++) {
     renderCard(projects[i], template);
   };
+
 }
 
 function renderCard(card, template) {

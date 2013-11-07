@@ -30,29 +30,7 @@
     <![endif]-->
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars.js"></script>
-    <!-- // <script src="js/masonry.pkgd.min.js"></script> -->
-    <script src="js/projects.js"></script>
-    <script id="project-template" type="text/x-handlebars-template">
-      <div class="col-md-6 col-lg-4 item thumbnails">
-        <div class="my-portfolio">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="images/{{name}}0.png" alt="...">
-            </div>
-            <div class="item">
-              <img src="images/{{name}}1.png" alt="...">
-            </div>
-            <div class="item">
-              <img src="images/{{name}}2.png" alt="...">
-            </div>
-          </div>
-          <span>{{title}}</span><br>
-          <p>{{description}}</p>
-        </div>
-      </div>
-    </script>
-
+    <script src="js/main.js"></script>
   </head>
 
   <body style="">
@@ -69,8 +47,8 @@
         </div>
         <div class="collapse navbar-collapse my-navigation-text">
           <ul class="nav navbar-nav" id="my-nav-menu">
-            <li><a href="index.html">ABOUT</a></li>
-            <li class="active"><a href="#">PROJECTS</a></li>
+            <li class="active"><a href="#">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -79,18 +57,21 @@
 
     <div class="container">
 
-      <div class="starter-template">
-        <h1 class="my-container">peter has a portfolio.</h1>
-        <p class="lead my-container">working for big companies. made with love and care. i do stuff. all kinds of stuff. and some more things as well.</p>
-        <p class="lead my-container">maybe it's less weird if I add some extra lines and texts.</p>
-        <p class="lead my-container">like an intro text or something. saying how awesome I am. just kidding.</p>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/hundredlovers0.png" alt="...">
+          </div>
+          <div class="item">
+            <img src="images/hundredlovers1.png" alt="...">
+          </div>
+          <div class="item">
+            <img src="images/hundredlovers2.png" alt="...">
+          </div>
+        </div>
       </div>
 
-      <div class="row" id="project-thumbnails" >
-                
-      </div>
-
-  </div><!-- /.container -->
-
-
-</body></html>
+    </div><!-- /.container -->
+  
+  </body>
+</html>
