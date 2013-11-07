@@ -1,16 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
-@import url(http://fonts.googleapis.com/css?family=Dosis);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 @import url(http://fonts.googleapis.com/css?family=Anaheim);
 
 body {
 	background-color: #474b4a;
 	color: #acccca;
-	font-family: 'Dosis', sans-serif;
+	font-family: 'Anaheim', sans-serif;
 }
 
 h1, h2 {
-	font-family: 'Dosis', sans-serif;	
+	font-family: 'Anaheim', sans-serif;	
 }
 
 .my-navigation-text {
@@ -108,7 +106,6 @@ form label {
 	padding: 38px 8px 12px 0;
 	font-size: 18px;
 	background-color: #37cdc7;
-	background-color: rgba(55, 205, 199, 0.6);
 	border-color: #37cdc7;
 	border-color: rgba(55, 205, 199, 0.6);
 	border-radius: 4px;
