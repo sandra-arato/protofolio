@@ -177,20 +177,31 @@ var projects = [
 
 var mainContent;
 
-function masonry() {
-	var container = mainContent;
-	var msnry = new Masonry( container, {
-	  // options...
-	  itemSelector: '.item',
-	  columnWidth: 720
-	});
+// function masonry() {
+// 	var container = document.getElementById("project-thumbnails");
+// 	var msnry = new Masonry( container, {
+// 	  // options...
+// 	  itemSelector: '.item',
+// 	  columnWidth: 720
+// 	});
+// }
+
+function clearfix() {
+	var clearDiv = $("<div />")
+		.html(" ")
+		.addClass("clearfix");
+	console.log("in clearfix");
+	$("#project-thumbnails").append(clearDiv);
+	console.log("after clear");
 }
 
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
   console.log("helloo");
   renderCards();
-
+  clearfix();
+  console.log("done");
+  // masonry();
 
 }
 

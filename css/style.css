@@ -72,10 +72,30 @@ form input {
 }
 
 form label {
+	float: right;
+	box-sizing: border-box;
+	border-color: #212123;
+	border-width: 1px;
+	border-style: solid;
 	background-color: #212123;
 	border-radius: 4px 4px 0 0;
-	padding: 0px 8px 0 8px;
+	padding: 6px 12px;
+	font-size: 18px;
 }
+
+form label:hover {
+	cursor: pointer;
+	border-color: #ddd;
+	border-width: 1px;
+	border-style: solid;
+	color: #37cdc7;
+}
+
+form label i {
+	padding-left: 6px;
+	color: #37cdc7;
+}
+
 .form-control:focus {
 	border-color: #37cdc7;
 	outline: 0;
@@ -96,7 +116,7 @@ form label {
 }
 
 .my-right-contact div {
-	margin-top: 18px;
+	margin-top: 28px;
 }
 
 #track-avail {
@@ -115,6 +135,7 @@ form label {
 }
 
 #track-geoloc {
+	margin-top: 20px;
 	background: url("../images/map.jpg");
 	width: 100%;
 	height: 240px;
