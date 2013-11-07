@@ -33,6 +33,16 @@
     <script src="js/handlebars.js"></script>
     <script src="js/main.js"></script>
     <script src="js/projects.js"></script>
+    <script id="project-template" type="text/x-handlebars-template">
+      <div class="col-md-6 col-lg-4">
+        <div class="my-portfolio">
+          <img src="images/{{name}}0.png" />
+          <span>{{title}}</span><br>
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </script>
+
   </head>
 
   <body style="">
@@ -66,7 +76,7 @@
         <p class="lead my-container">like an intro text or something. saying how awesome I am. just kidding.</p>
       </div>
 
-      <div class="row">
+      <div class="row" id="project-thumbnails">
         <div class="col-md-6 col-lg-4">
           <div class="my-portfolio">
             <img src="images/image.png">

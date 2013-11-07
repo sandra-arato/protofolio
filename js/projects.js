@@ -5,7 +5,7 @@ var projects = [
 		title:
 			"A Hundred Lovers",
 		description: 
-			"An interactive website featuring Diesel’s new Summer 2010 collection. We could pause the video at any time during the experience, check and see information about every single clothing one by one worn by the actors. We could buy these clothes by clicking the ‘buy’ button that went directly to Diesel’s online store.",
+			"An interactive website featuring Diesel’s new Summer 2010 collection. We could pause the video at any time during the experience, check and see information about every single clothing one by one worn by the actors.",
 		producer:
 			"Stinkdigital",
 		client:
@@ -59,7 +59,7 @@ var projects = [
 	},
 	{
 		name: 
-			"anotherproject",
+			"ikeacats",
 		title:
 			"Third Project",
 		description: 
@@ -88,7 +88,7 @@ var projects = [
 	},
 	{
 		name: 
-			"thisisme",
+			"hundredlovers",
 		title:
 			"This Is ME / Get inspired",
 		description: 
@@ -117,7 +117,7 @@ var projects = [
 	},
 	{
 		name: 
-			"whatevertechno",
+			"hundredlovers",
 		title:
 			"Tweetlover's Music",
 		description: 
@@ -146,7 +146,7 @@ var projects = [
 	},
 	{
 		name: 
-			"ilovenyc",
+			"ikeacats",
 		title:
 			"I heart NYC",
 		description: 
@@ -179,16 +179,16 @@ var mainContent;
 
 console.log('hello')
 function initPage() {
-  mainContent = document.getElementById("main-content");
+  mainContent = document.getElementById("project-thumbnails");
   renderCards();
 
 }
 
 function renderCards() {
-  var source   = $("#ecard-template").html();
+  var source   = $("#project-template").html();
   var template = Handlebars.compile(source);
-  for (var i = 0; i < ecards.length; i++) {
-    renderCard(ecards[i], template);
+  for (var i = 0; i < projects.length; i++) {
+    renderCard(projects[i], template);
   };
 }
 
@@ -198,3 +198,5 @@ function renderCard(card, template) {
   div.innerHTML = html;
   mainContent.appendChild(div);
 }
+
+$(document).ready(initPage);
