@@ -22,8 +22,8 @@ var projects = [
 			"Eurobest - Bronze/Interactive/Websites",
 			"BIMA - Best Advertising"],
 		images: 
-			["images/hundredlovers0.jpg",
-			"images/hundredlovers1.jpg",
+			["images/hundredlovers1.jpg",
+			"images/hundredlovers0.jpg",
 			"images/hundredlovers2.jpg",
 			"images/hundredlovers3.jpg"]
 		// PRESS to be added later
@@ -80,10 +80,10 @@ var projects = [
 			"Eurobest - Bronze/Interactive/Websites",
 			"BIMA - Best Advertising"],
 		images: 
-			["images/hundredlovers0.jpg",
+			["images/hundredlovers3.jpg",
+			"images/hundredlovers0.jpg",
 			"images/hundredlovers1.jpg",
-			"images/hundredlovers2.jpg",
-			"images/hundredlovers3.jpg"]
+			"images/hundredlovers2.jpg"]
 		// PRESS to be added later
 	},
 	{
@@ -138,9 +138,9 @@ var projects = [
 			"Eurobest - Bronze/Interactive/Websites",
 			"BIMA - Best Advertising"],
 		images: 
-			["images/hundredlovers0.jpg",
+			["images/hundredlovers2.jpg",
+			"images/hundredlovers0.jpg",
 			"images/hundredlovers1.jpg",
-			"images/hundredlovers2.jpg",
 			"images/hundredlovers3.jpg"]
 		// PRESS to be added later
 	},
@@ -177,10 +177,20 @@ var projects = [
 
 var mainContent;
 
-console.log('hello')
+function masonry() {
+	var container = mainContent;
+	var msnry = new Masonry( container, {
+	  // options...
+	  itemSelector: '.item',
+	  columnWidth: 720
+	});
+}
+
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
+  console.log("helloo");
   renderCards();
+
 
 }
 
