@@ -178,54 +178,10 @@ var projects = [
 var mainContent;
 var j = 0;
 
-function carousel() {
-	$( ".my-portfolio:hover" ).hover(
-	  function() {
-	    $( this ).addClass( "carousel slide" );
-	    $( this ).attr("id", "carousel-example-generic");
-	    $( this ).attr("data-ride", "carousel");
-	  }, function() {
-	    $( this ).removeClass( "carousel slide" );
-	    $( this ).attr("id", "");
-	    $( this ).attr("data-ride", "");
-	  }
-	);
-}
-
-function setHeight () {
-	var div = document.getElementsByClassName("0");
-	var len = projects.length;
-	var x = div.offsetHeight;
-	console.log("entering for");
-	child = div.firstElementChild;
-	console.log(div);
-	console.log(x);
-	
-	// console.log(x);
-	// for (var i = 1; i < len; i++) {
-	// 	if (($("."+i).height()) < height) {
-	// 		console.log("in if");
-	// 		height = $("."+i).height();
-	// 		console.log("the height is " + height);
-	// 	}
-	// };
-}
-
-function clearfix() {
-	var clearDiv = $("<div />")
-		.html(" ")
-		.addClass("clearfix");
-	console.log("in clearfix");
-	$("#project-thumbnails").append(clearDiv);
-	console.log("after clear");
-}
 
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
   renderCards();
-  setHeight();
-  // carousel();
-  
 }
 
 function renderCards() {
@@ -242,7 +198,8 @@ function renderCard(card, template) {
 	var div = document.createElement("div");
 	var html   = template(card);
 	div.innerHTML = html;
-	div.className = j;
+	div.className = "col-md-6 col-lg-4";
+	div.id = j;
 	mainContent.appendChild(div);
 	// console.log(div);
 	j++;
@@ -250,12 +207,3 @@ function renderCard(card, template) {
 
 $(document).ready(initPage);
 
-$(window).load(function() {
-		// var div = document.getElementsByClassName("0");
-		// var len = projects.length;
-		// var x = div.offsetHeight;
-		// console.log("entering for");
-		// child = div.firstElementChild;
-		// console.log(div);
-		// console.log(x);
-});

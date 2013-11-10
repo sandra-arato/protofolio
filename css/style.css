@@ -1,6 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
 @import url(http://fonts.googleapis.com/css?family=Anaheim);
 
+@media (min-width: 992px) {
+	.row div p {
+		height: 80px;
+		overflow: hidden;
+	}
+	.row div img {
+		max-height: 175px;
+		overflow: hidden;
+	}
+}
+
 body {
 	background-color: #474b4a;
 	color: #acccca;
