@@ -176,6 +176,7 @@ var projects = [
 ]
 
 var mainContent;
+var j = 0;
 
 function carousel() {
 	$( ".my-portfolio:hover" ).hover(
@@ -192,15 +193,22 @@ function carousel() {
 }
 
 function setHeight () {
-	boxes = $( ".thumbnails" );
-	console.log(boxes);
-	maxHeight = Math.max.apply(
-	  Math, boxes.map(function() {
-	    return $(this).height();
-	}).get());
-	// maxHeight = $("#project-thumbnails").height();
-	console.log(maxHeight);
-	// boxes.height(maxHeight);
+	var div = document.getElementsByClassName("0");
+	var len = projects.length;
+	var x = div.offsetHeight;
+	console.log("entering for");
+	child = div.firstElementChild;
+	console.log(div);
+	console.log(x);
+	
+	// console.log(x);
+	// for (var i = 1; i < len; i++) {
+	// 	if (($("."+i).height()) < height) {
+	// 		console.log("in if");
+	// 		height = $("."+i).height();
+	// 		console.log("the height is " + height);
+	// 	}
+	// };
 }
 
 function clearfix() {
@@ -215,7 +223,7 @@ function clearfix() {
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
   renderCards();
-  // setHeight();
+  setHeight();
   // carousel();
   
 }
@@ -225,15 +233,29 @@ function renderCards() {
   var template = Handlebars.compile(source);
   for (var i = 0; i < projects.length; i++) {
     renderCard(projects[i], template);
+
   };
 
 }
 
 function renderCard(card, template) {
-  var div = document.createElement("div");
-  var html   = template(card);
-  div.innerHTML = html;
-  mainContent.appendChild(div);
+	var div = document.createElement("div");
+	var html   = template(card);
+	div.innerHTML = html;
+	div.className = j;
+	mainContent.appendChild(div);
+	// console.log(div);
+	j++;
 }
 
 $(document).ready(initPage);
+
+$(window).load(function() {
+		// var div = document.getElementsByClassName("0");
+		// var len = projects.length;
+		// var x = div.offsetHeight;
+		// console.log("entering for");
+		// child = div.firstElementChild;
+		// console.log(div);
+		// console.log(x);
+});
