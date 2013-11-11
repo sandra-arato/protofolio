@@ -179,9 +179,11 @@ var mainContent;
 var j = 0;
 
 
+
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
   renderCards();
+  fireCarousel();
 }
 
 function renderCards() {
@@ -201,8 +203,28 @@ function renderCard(card, template) {
 	div.className = "col-md-6 col-lg-4";
 	div.id = j;
 	mainContent.appendChild(div);
-	// console.log(div);
 	j++;
+}
+
+function fireCarousel() {
+	$(".my-portfolio").hover(
+  		function (e){
+    		var divId = $( event.target ).closest(".col-md-6").find(".my-portfolio");
+    		console.log(divId);
+    		$(divId).addClass("carousel slide");
+    		$(divId).attr("data-ride", "carousel");
+    		$(divId).carousel(
+    		{
+				interval: 2000,
+				pause: "false"
+			});
+  		}, 
+  		function (e){
+  			var divId = $( event.target ).closest(".col-md-6").find(".my-portfolio");
+  			$(divId).carousel("pause");
+  			$(divId).removeClass("carousel slide");
+  			$(divId).removeAttr("data-ride");
+  	});
 }
 
 $(document).ready(initPage);

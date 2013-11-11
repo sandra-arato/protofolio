@@ -12,6 +12,8 @@
 	}
 }
 
+/*General styling*/
+
 body {
 	background-color: #474b4a;
 	color: #acccca;
@@ -40,17 +42,7 @@ h1, h2 {
 	padding: 4px;
 }
 
-.my-font-family div {
-	background-color: #ddd;
-	text-align: center;
-	color: #212123;
-	/*margin: 12px;*/
-}
-
-.my-font-family div:hover {
-	background-color: #212123;
-	color: #ddd;
-}
+/*Project.html styling*/
 
 div.my-portfolio {
 	font-size: 14px;
@@ -67,14 +59,11 @@ div.my-portfolio:hover {
 	box-shadow: inset 0 1px 1px
 		rgba(0, 0, 0, 0.075), 0 0 10px
 		rgba(55, 205, 199, 0.8);
+	cursor: pointer;
 }
 
 .row {
 	display: table-row;
-}
-
-.thumbnails {
-	display: table-cell;
 }
 
 .my-portfolio img {
@@ -85,6 +74,8 @@ div.my-portfolio:hover {
 	font-size: 20px;
 	padding-top: 6px;
 }
+
+/*Contact.html styling*/
 
 form input {
 	margin: 0 0 20px 0;
@@ -169,3 +160,7 @@ form label i {
 
 	border-radius: 4px;
 }
+
+
+/*Animations*/
+
