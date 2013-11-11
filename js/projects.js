@@ -178,12 +178,21 @@ var projects = [
 var mainContent;
 var j = 0;
 
+function loadModal(id) {
+	// load project data to modal structure
+}
 
+function showModal() {
+	$(".my-portfolio").click(function() {
+		$('.my-modal').modal();
+	});
+}
 
 function initPage() {
   mainContent = document.getElementById("project-thumbnails");
   renderCards();
   fireCarousel();
+  showModal();
 }
 
 function renderCards() {
@@ -209,21 +218,22 @@ function renderCard(card, template) {
 function fireCarousel() {
 	$(".my-portfolio").hover(
   		function (e){
-    		var divId = $( event.target ).closest(".col-md-6").find(".my-portfolio");
-    		console.log(divId);
-    		$(divId).addClass("carousel slide");
-    		$(divId).attr("data-ride", "carousel");
-    		$(divId).carousel(
+    		var div = $( event.target ).closest(".col-md-6").find(".my-portfolio");
+    		var parentId = $( event.target ).closest(".col-md-6").attr("id");
+    		loadModal(parentId);
+    		$(div).addClass("carousel slide");
+    		$(div).attr("data-ride", "carousel");
+    		$(div).carousel(
     		{
 				interval: 2000,
 				pause: "false"
 			});
   		}, 
   		function (e){
-  			var divId = $( event.target ).closest(".col-md-6").find(".my-portfolio");
-  			$(divId).carousel("pause");
-  			$(divId).removeClass("carousel slide");
-  			$(divId).removeAttr("data-ride");
+  			var div = $( event.target ).closest(".col-md-6").find(".my-portfolio");
+  			$(div).carousel("pause");
+  			$(div).removeClass("carousel slide");
+  			$(div).removeAttr("data-ride");
   	});
 }
 
